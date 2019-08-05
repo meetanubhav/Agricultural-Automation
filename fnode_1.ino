@@ -1,7 +1,11 @@
 #include  <ESP8266WiFi.h>
 
-#define WIFI_SSID "monster" // Change the name of your WIFI
-#define WIFI_PASSWORD "12345678" // Change the password of your WIFI
+#define WIFI_SSID "ProjectAI" 
+#define WIFI_PASSWORD "project@sil123" 
 
 void setup(){}
-void loop(){}
+void loop(){
+
+http://192.168.0.100/projectai/first.php?x=2
+	
+}

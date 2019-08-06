@@ -1,10 +1,12 @@
 try:
   import Tkinter
 except:
-  import tkinter
-def showtext():
-   tkMessageBox.showinfo( "Hello Python", "Hello World")
+    import tkinter
+    from tkinter import *
 
+def showtext():
+    messagebox.showinfo("Hello", "Red Button clicked")
+    
 def ui_main():
     top = tkinter.Tk()
     Button1= tkinter.Button(top, text ="Hello",command = showtext)

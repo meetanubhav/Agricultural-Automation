@@ -1,13 +1,16 @@
 import tkinter as tk
 from tkinter import messagebox
 def showtext():
-    messagebox.showinfo("Hello", "Red Button clicked")
-    
+    msg = messagebox.showinfo("Say Hello", "Hello World")
+
 def ui_main():
     window = tk.Tk()
-    window.title("GUI")
+    window.title("Agro")
+    frame = tk.Frame(window)
     window.geometry('400x400')
     window.configure(background="grey")
+    lblinfo = tk.Label(window, font=('aria', 30, 'bold'), text="Agrosight", fg="steel blue",  bd=10, anchor='center')
+    lblinfo.grid(row=0, column=2, pady=30, padx=30)
     btn1 = tk.Button(window, text="B1",fg="green",command=showtext)
     btn1.grid(row=1, column=1, rowspan=2, pady=30, padx=30)
     btn1.config(height=2, width=6)

@@ -10,7 +10,7 @@ class ui_main:
     window.title("Agro")
     frame = tk.Frame(window)
     window.geometry('800x800')
-    window.configure(background="grey")
+    window.configure(background="green")
     lblinfo = tk.Label(window, font=('aria', 30, 'bold'), text="Agrosight", fg="steel blue",  bd=10, anchor='center')
     lblinfo.grid(row=0, column=2, pady=30, padx=30)
     c="red"
@@ -29,15 +29,23 @@ class ui_main:
     x=1.23
     y=2.2
     z=3.2
-    a1 = tk.Label(window,  text=x)
-    a1.grid(row=1, column=2, rowspan=2, pady=30, padx=60)
-    b1 = tk.Label(window, text=y)
-    b1.grid(row=2, column=2, rowspan=2, pady=60, padx=60)
-    c1 = tk.Label(window, text=z)
-    c1.grid(row=3, column=2, rowspan=2, pady=120, padx=60)
+    def label1(window,x):
+      a1 = tk.Label(window,  text=x)
+      a1.grid(row=1, column=2, rowspan=2, pady=30, padx=60)
+    def label2(window,y):
+      b1 = tk.Label(window, text=y)
+      b1.grid(row=2, column=2, rowspan=2, pady=60, padx=60)
+    def label3(window,z):
+      c1 = tk.Label(window, text=z)
+      c1.grid(row=3, column=2, rowspan=2, pady=120, padx=60)
+    
+    # calling all the attributes
     fun_btn1(window,c)
     fun_btn2(window,c)
     fun_btn3(window,c)
+    label1(window,x)
+    label2(window,y)
+    label3(window,z)
     window.mainloop()
 
 if __name__ == "__main__":

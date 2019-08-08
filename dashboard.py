@@ -1,12 +1,31 @@
 import tkinter as tk
 from tkinter import messagebox
+import random
 # import db
+def welcome_screen():
+	global welscr
+	welscr = tk.Tk()
+	# msg = messagebox.showinfo("Farmer's Friend","Welcome")
+	frame = tk.Frame(welscr)
+	welscr.geometry('800x800')
+	welscr.configure(background="green")
+	btn1 = tk.Button(welscr, text="B1",fg="white",background="black",command=showtext)
+	btn1.grid(row=1, column=1, rowspan=2, pady=30, padx=30)
+	btn1.config(height=2, width=6)
+	welscr.mainloop()
+	# print("hello")
 def showtext():
-    # msg = messagebox.showinfo("Say Hello", "Hello World")
-    ui_obj=ui_main()
-    ui_obj.showtext1()
+    # ui_obj=ui_main()
+    # ui_obj.showtext1()
+    # if(yy==2):
+    try:
+    	window.destroy()
+    except:
+    	welscr.destroy()
+    	# ui_main
+    print("executed")
 class ui_main:
-    window = tk.Tk()
+    global window;window = tk.Tk()
     window.title("Agro")
     frame = tk.Frame(window)
     window.geometry('800x800')
@@ -26,9 +45,9 @@ class ui_main:
       btn3 = tk.Button(window, text="B3",fg="white",background=c,command=showtext)
       btn3.config(height=2, width=6)
       btn3.grid(row=3, column=1, rowspan=2,  pady=30, padx=30)
-    x=1.23
-    y=2.2
-    z=3.2
+    x=random.randrange(20,50,3)
+    y=random.randrange(20,50,3)
+    z=random.randrange(20,50,3)
     def label1(window,x):
       a1 = tk.Label(window,  text=x)
       a1.grid(row=1, column=2, rowspan=2, pady=30, padx=60)
@@ -49,4 +68,4 @@ class ui_main:
     window.mainloop()
 
 if __name__ == "__main__":
-    ui_main()
+    welcome_screen()
